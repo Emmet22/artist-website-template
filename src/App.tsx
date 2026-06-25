@@ -1,5 +1,7 @@
-import Navbar from "./components/Navbar.tsx";
-import ArtPiece from "./components/ArtPiece.tsx";
+import Navbar from "./components/Navbar";
+import ArtPiece from "./components/ArtPiece";
+import Footer from "./components/Footer";
+import Collection from "./components/Collection";
 import "./App.css";
 
 function App() {
@@ -13,7 +15,12 @@ function App() {
 
         <p>Below is an art piece component </p>
         <ArtPiece></ArtPiece>
+
+        <p>Below is a sample collection</p>
+        <Collection />
       </main>
+
+      <Footer></Footer>
     </div>
   );
 }
