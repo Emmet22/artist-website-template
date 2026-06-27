@@ -13,9 +13,6 @@ function App() {
         <h1>Artist Website Template Project</h1>
         <p>This is the homepage</p>
 
-        <p>Below is an art piece component </p>
-        <ArtPiece></ArtPiece>
-
         <p>Below is a sample collection</p>
         <Collection />
       </main>
