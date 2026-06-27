@@ -6,19 +6,47 @@ interface ArtPieceData {
     description: string;
 }
 
-// sample array of art piece data
+interface CollectionData {
+    id: number;
+    name: string;
+    description: string;
+    pieces: ArtPieceData[];
+}
+
+interface CollectionProps {
+    name: string;
+    description: string;
+    pieces: ArtPieceData[];
+}
+
+/* sample array of art piece data
 const woodlandArtPieceData: ArtPieceData[] = [
     {id: 1, imageURL: "sampleURL", description: "Sample desc 1"},
     {id: 2, imageURL: "sampleURL2", description: "Sample desc 2"},
     {id: 3, imageURL: "sampleURL3", description: "Sample desc 3"}
 ];
+*/
 
-function Collection() {
+function Collection({name, description, pieces}: CollectionProps) {
     return (
         <div>
-            <h3>COLLECTION NAME</h3>
-            <div style={{display: "flex", gap: "20px", justifyContent: "center"}}>
-                { 
+
+            <div>
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <div style={{display: "flex", gap: "20px", justifyContent: "center"}}>
+                    {
+                        pieces.map((piece) => 
+                            <ArtPiece 
+                            key={piece.id}
+                            imageURL={piece.imageURL}
+                            description={piece.description}
+                            />
+                        )
+                    }
+                </div>
+            </div>
+                {/* 
                 woodlandArtPieceData.map((piece) => (
                     <ArtPiece 
                         key={piece.id}
@@ -26,8 +54,7 @@ function Collection() {
                         description={piece.description}
                     />    
                 ))
-                }
-            </div>
+                */}
         </div>
     );
 }

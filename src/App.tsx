@@ -1,8 +1,13 @@
 import Navbar from "./components/Navbar";
-import ArtPiece from "./components/ArtPiece";
 import Footer from "./components/Footer";
 import Collection from "./components/Collection";
 import "./App.css";
+
+const woodlandPieces = [
+  { id: 1, imageURL: "sampleURL1", description: "Sample desc 1" },
+  { id: 2, imageURL: "sampleURL2", description: "Sample desc 2" },
+  { id: 3, imageURL: "sampleURL3", description: "Sample desc 3" },
+];
 
 function App() {
   return (
@@ -14,7 +19,11 @@ function App() {
         <p>This is the homepage</p>
 
         <p>Below is a sample collection</p>
-        <Collection />
+        <Collection 
+          name="Woodland collection"
+          description="Sample woodland collection description"
+          pieces={woodlandPieces}
+        />
       </main>
 
       <Footer></Footer>
