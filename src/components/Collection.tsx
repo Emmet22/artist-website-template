@@ -1,12 +1,12 @@
 import ArtPiece from "./ArtPiece";
 
-interface ArtPieceData {
+export interface ArtPieceData {
     id: number;
     imageURL: string;
     description: string;
 }
 
-interface CollectionData {
+export interface CollectionData {
     id: number;
     name: string;
     description: string;
@@ -18,14 +18,6 @@ interface CollectionProps {
     description: string;
     pieces: ArtPieceData[];
 }
-
-/* sample array of art piece data
-const woodlandArtPieceData: ArtPieceData[] = [
-    {id: 1, imageURL: "sampleURL", description: "Sample desc 1"},
-    {id: 2, imageURL: "sampleURL2", description: "Sample desc 2"},
-    {id: 3, imageURL: "sampleURL3", description: "Sample desc 3"}
-];
-*/
 
 function Collection({name, description, pieces}: CollectionProps) {
     return (
@@ -46,15 +38,6 @@ function Collection({name, description, pieces}: CollectionProps) {
                     }
                 </div>
             </div>
-                {/* 
-                woodlandArtPieceData.map((piece) => (
-                    <ArtPiece 
-                        key={piece.id}
-                        imageURL={piece.imageURL}
-                        description={piece.description}
-                    />    
-                ))
-                */}
         </div>
     );
 }
