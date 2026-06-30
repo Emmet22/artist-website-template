@@ -1,0 +1,30 @@
+/* index.css is for global styles such as body, *, and default fonts */
+
+
+/* CSS reset */ 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* N.B. for now these are all samples */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a8a0a0f8;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;/* makes the cursor a hand */
+}

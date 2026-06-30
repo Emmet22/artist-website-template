@@ -1,0 +1,8 @@
+/* App.css is for styling the layout of the app, such as page spacing etc */
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
