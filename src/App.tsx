@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Collection from "./components/Collection";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Collection from "./components/artwork/Collection";
 import { sampleCollections } from "./data/SampleCollectionData";
 import "./App.css";
 

@@ -1,4 +1,4 @@
-import type { CollectionData } from "../components/Collection";
+import type { CollectionData } from "../components/artwork/Collection";
 
 export const sampleCollections: CollectionData[] = [
     {
