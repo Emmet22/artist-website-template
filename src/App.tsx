@@ -2,7 +2,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Collection from "./components/artwork/Collection";
 import { sampleCollections } from "./data/SampleCollectionData";
-import "./App.css";
+//import "./App.css";
 
 const woodlandPieces = [
   { id: 1, imageURL: "sampleURL1", description: "Sample desc 1" },
