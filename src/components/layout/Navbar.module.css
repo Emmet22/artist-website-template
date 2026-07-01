@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 3;
     align-items: center;
- 
     width: 100%;
     background-color: rgb(124, 124, 124);
     padding: 1rem;
@@ -14,8 +13,6 @@
     grid-column: 1;
     height: 50px;
     width: 50px;
-    align-items: center;
-    justify-content: center;
 }
 
 .navLinks {

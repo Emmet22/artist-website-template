@@ -1,0 +1,39 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.logo {
+    border: 5px solid;
+    height: 50px;
+    width: 50px;
+}
+
+.footerContent {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 5rem;
+    justify-content: center;
+    align-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.copyright {
+    text-align: center;
+}
