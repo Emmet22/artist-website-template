@@ -1,75 +1,27 @@
-# React + TypeScript + Vite
+# Artist Website Template
+This project is a reusable artist portfolio website template built with React. The goal is to create a modern, responsive template that can easily be edited/modified to deploy for multiple different artists.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+CURRENTLY
+- React (Vite setup)
+- TypeScript
+- Figma (wireframes/design)
 
-Currently, two official plugins are available:
+## Goal of this project
+- Create a clean template for an artists portfolio to be able to easily edit and sell deployments to multiple different artists.
+- Portfolio project to demonstrate modern web development.
+- learn modern frontend development with React, TypeScript instead of plain HTML, CSS, JS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Current progress
+- Created simple React components (Collection, ArtPiece, Footer, Navbar) to learn the basics of React.
+- Learned about props and the map function.
+- Organised the project structure within the src folder.
+- Started creating the actual layout of the project, using Figma to create wireframes.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+## Future features
+- React Router for page navigation.
+- Content management system (CMS) for the artist, using Supabase.
+- Art galleries displaying all collections and the pieces within each collection.
+- Enquirey functionality to allow user to enquire about an art piece.
+- Email list sign up.
+- Deployment with Vercel, demo and client websites.
