@@ -1,0 +1,14 @@
+.artPiece {
+    padding: 1rem;
+    border: 5px solid;
+    height: auto;
+    width: 300px;
+}
+
+.artContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
