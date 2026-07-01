@@ -1,3 +1,4 @@
+import Hero from "./components/common/Hero";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Collection from "./components/artwork/Collection";
@@ -10,8 +11,7 @@ function App() {
       <Navbar />
 
       <main>
-        <h1>Artist Website Template Project</h1>
-        <p>This is the homepage</p>
+        <Hero />
 
         <p>This is a sample collection</p>
         {/* using the map function to make use of the sample collection data */}
@@ -24,18 +24,8 @@ function App() {
                 pieces={collection.pieces}
             />
           ))
-        }
-
-        {/*
-        <p>Below is a sample collection</p>
-        <Collection 
-          name="Woodland collection"
-          description="Sample woodland collection description"
-          pieces={woodlandPieces}
-        />
-        */}
-      
-      
+        }      
+  
       </main>
     <Footer />
       
