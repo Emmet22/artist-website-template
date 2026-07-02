@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import styles from './Footer.module.css';
 
 function Footer() {
@@ -22,10 +24,10 @@ function Footer() {
 
                 <div className={styles.footerLinks}>
                     <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">GALLERY</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><Link to="/">HOME</Link></li>
+                        <li><Link to="/gallery">GALLERY</Link></li>
+                        <li><Link to="/about">ABOUT</Link></li>
+                        <li><Link to="/contact">CONTACT</Link></li>
                     </ul>
                 </div>
             </div>
