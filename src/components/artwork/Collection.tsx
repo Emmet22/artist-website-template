@@ -1,4 +1,5 @@
 import ArtPiece from "./ArtPiece";
+import styles from "./Collection.module.css";
 
 export interface ArtPieceData {
     id: number;
@@ -21,21 +22,21 @@ interface CollectionProps {
 
 function Collection({name, description, pieces}: CollectionProps) {
     return (
-        <div>
+        <div className={styles.collection}>
+            <h2>{name}</h2>
 
-            <div>
-                <h3>{name}</h3>
-                <p>{description}</p>
-                <div style={{display: "flex", gap: "20px", justifyContent: "center"}}>
-                    {
-                        pieces.map((piece) => 
-                            <ArtPiece 
-                            key={piece.id}
-                            imageURL={piece.imageURL}
-                            description={piece.description}
-                            />
-                        )
-                    }
+            <div className={styles.collectionContent}>            
+                <div className={styles.collectionInfo}>
+                    <p>{description}</p>
+                </div>
+                <div className={styles.collectionPieces}>
+                    {pieces.map((piece) => 
+                        <ArtPiece 
+                        key={piece.id}
+                        imageURL={piece.imageURL}
+                        description={piece.description}
+                        />
+                    )}
                 </div>
             </div>
         </div>

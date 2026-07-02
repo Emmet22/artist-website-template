@@ -1,0 +1,22 @@
+.collection {
+    margin: 1rem;
+    text-align: left;
+}
+
+.collectionContent {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.collectionInfo {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.collectionPieces {
+    flex: 1;
+    display: flex;
+    gap: 0.2rem;
+}

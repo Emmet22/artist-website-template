@@ -15,10 +15,10 @@ function App() {
         <Hero />
 
         <Section>
-          <h3>Featured Collections</h3>
+          <h2>Featured Collections</h2>
           <Collection 
             key="1"
-            name="Sample Collection"
+            name="Sample Collection Name"
             description="This is a sample collection description."
             pieces={[
               { id: 1, imageURL: "https://placehold.co/150x150", description: "Sample desc 1" },
