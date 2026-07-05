@@ -17,11 +17,12 @@ CURRENTLY
 - Learned about props and the map function.
 - Organised the project structure within the src folder.
 - Started creating the actual layout of the project, using Figma to create wireframes.
+- React Router for page navigation.
 
 ## Future features
-- React Router for page navigation.
 - Content management system (CMS) for the artist, using Supabase.
 - Art galleries displaying all collections and the pieces within each collection.
 - Enquirey functionality to allow user to enquire about an art piece.
 - Email list sign up.
 - Deployment with Vercel, demo and client websites.
+- Full responsivness for mobile and different screen sizes.
