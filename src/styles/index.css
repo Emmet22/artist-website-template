@@ -1,30 +1,92 @@
 /* index.css is for global styles such as body, *, and default fonts */
 
 
-/* CSS reset */ 
-* {
-    margin: 0;
-    padding: 0;
+/* CSS reset, this will ensure there is no additional browser styling */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-/* N.B. for now these are all samples */
+/* design system (colour pallete, font, border-radius, shadow) */
+:root {
 
+    /* colour palette */
+    --clr-background: #F8F6F2;
+    --clr-surface: #FFFFFF;
+
+    --clr-primary: #2C2C2C;
+    --clr-secondary: #666666;
+
+    --clr-accent: #B08D57;
+    --clr-accent-hover: #8F7044;
+
+    --clr-border: #E5E5E5;
+
+    --clr-footer: #1E1E1E;
+
+
+    /* fonts */
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-heading: Georgia, "Times New Roman", serif;
+
+
+    /* Border Radius */
+    --radius: 12px;
+
+
+    /* Shadow */
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* base styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #a8a0a0f8;
-    color: #222;
+    font-family: var(--font-body);
+    background-color: var(--clr-background);
+    color: var(--clr-primary);
+    line-height: 1.6;
 }
 
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--clr-primary);
+    font-weight: 600;
+}
+
+p {
+    color: var(--clr-secondary);
+}
+
+/* image styling */
 img {
     max-width: 100%;
     display: block;
 }
 
+/* link styling */
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
+/* list styling */
+ul, ol {
+    list-style: none;
+}
+
+/* button styling */
 button {
-    cursor: pointer;/* makes the cursor a hand */
+    cursor: pointer;
+    font: inherit;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1rem;
+    transition: 0.2s ease;
+}
+
+/* form styling */
+input, textarea, select {
+    font: inherit;
 }
