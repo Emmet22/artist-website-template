@@ -1,31 +1,46 @@
 .navbar {
+    /* Updated layout to be flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* OLD CSS (GRID LAYOUT) - wont be good for responsiveness
     display: grid;
     grid-template-columns: 3;
     align-items: center;
+    */
+    
     width: 100%;
-    background-color: rgb(124, 124, 124);
-    padding: 1rem;
-    border-bottom: 2px solid white;
+    background-color: var(--clr-surface);
+    padding: 1rem 5rem;
+    border: 2px solid var(--clr-border);
+    border-radius: var(--radius);
 }
 
+/* THIS IS A PLACEHOLDER DIV FOR LOGO */
 .logo {
-    border: 5px solid;
-    grid-column: 1;
-    height: 50px;
-    width: 50px;
+    border: 5px var(--clr-border) solid;
+    height: 80px;
+    width: 80px;
+
+    /* 
+    This flexbox alligns the "LOGO" text to the center
+    Remove when adding sample logo.
+    */
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .navLinks {
     display: flex;
-    list-style: none;
     gap: 2rem;
-    grid-column: 2;
 }
 
 .navLinks a {
-    color: black;
+    color: var(--clr-accent);
 }
 
 .navLinks a:hover {
-    color: rgb(82, 82, 82);
+    color: var(--clr-accent-hover);
 }
