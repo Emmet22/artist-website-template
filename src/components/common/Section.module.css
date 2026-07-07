@@ -1,8 +1,8 @@
 .section {
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 1200px;
     padding: 3rem 2rem;
-    background-color: rgb(53, 53, 53);
-    margin-bottom: 2rem;
+    background-color: var(--clr-surface);
+    margin: 0 auto 3rem;
+    border-radius: var(--radius);
 }   
