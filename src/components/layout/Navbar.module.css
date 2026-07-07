@@ -20,6 +20,7 @@
 /* THIS IS A PLACEHOLDER DIV FOR LOGO */
 .logo {
     border: 5px var(--clr-border) solid;
+    border-radius: var(--radius);
     height: 80px;
     width: 80px;
 

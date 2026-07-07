@@ -2,38 +2,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
     width: 100%;
-    padding: 1rem;
-    gap: 1rem;
+
+    background-color: var(--clr-footer);
+    color: var(--clr-footer-text);
+
+    padding: 5rem 3rem;
+    gap: 2rem;
 }
 
 .brand {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 25px;
+    color: var(--clr-footer-text);
+    gap: 1rem;
+}
+
+/* This is needed to overright the index.css (root) h3 styling */
+.brand H3 {
+    /* index.css color for this element was too dark */
+    color: var(--clr-footer-text);
 }
 
 .logo {
-    border: 5px solid;
-    height: 50px;
-    width: 50px;
+    /* center logo placeholder (remove when image is added) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    width: 60px;
+
+    border: 2px solid var(--clr-border);
+    border-radius: var(--radius);
 }
 
 .footerContent {
+    /* OLD CSS 
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 5rem;
+    */
+    display: flex;
     justify-content: center;
-    align-content: center;
+    gap: 3rem;
 }
 
-ul {
-    list-style: none;
+.footerContent ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footerContent a {
+    color: var(--clr-footer-text);
+    transition: color 0.3s ease;
+}
+
+.footerContent a:hover {
+    color: var(--clr-accent-hover);
 }
 
 .copyright {
     text-align: center;
+    color: var(--clr-footer-text);
 }

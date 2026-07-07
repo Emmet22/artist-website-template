@@ -23,7 +23,10 @@
 
     --clr-border: #E5E5E5;
 
-    --clr-footer: #1E1E1E;
+    /*--clr-footer: #1E1E1E; VERY DARK */
+    /* --clr-footer: #3A3A38; STILL A BIT DARK */
+    --clr-footer: #5A5752; /* dark grey, stone colour */
+    --clr-footer-text: #F5F5F5;
 
 
     /* fonts */

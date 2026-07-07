@@ -4,7 +4,8 @@ import styles from './Footer.module.css';
 
 function Footer() {
     return (
-        <div className={styles.footer}>
+        /* changed parent element from div to footer */
+        <footer className={styles.footer}>
             <div className={styles.brand}>
                 <div className={styles.logo}>LOGO</div>
                 <h3>Original Art Each Unique</h3>
@@ -32,7 +33,7 @@ function Footer() {
                 </div>
             </div>
             <p className={styles.copyright}>Copyright Emmet Casey 2026</p>
-        </div>
+        </footer>
     );
 }
 
