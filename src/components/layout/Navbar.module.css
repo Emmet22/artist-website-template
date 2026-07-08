@@ -1,4 +1,12 @@
 .navbar {
+    /* Making the navbar sticky */
+    position: sticky;
+    top: 0;
+
+    /* blurred glass filter */
+    backdrop-filter: blur(20px);
+    background: var(--clr-surace-transparent);
+    
     /* Updated layout to be flexbox */
     display: flex;
     align-items: center;
@@ -11,7 +19,7 @@
     */
     
     width: 100%;
-    background-color: var(--clr-surface);
+    /*background-color: var(--clr-surface);*/
     padding: 1rem 5rem;
     border-bottom: 2px solid var(--clr-border);
     
