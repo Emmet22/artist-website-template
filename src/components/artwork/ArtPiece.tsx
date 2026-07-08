@@ -13,7 +13,7 @@ function ArtPiece({ imageURL, description }: ArtPieceProps) {
                 <img src={imageURL}/>
                 <p>{description}</p>
             </div>
-            <button>ENQUIRE</button>
+            <button className="enquireButton">ENQUIRE</button>
         </div>
             
 );

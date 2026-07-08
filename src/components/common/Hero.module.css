@@ -1,13 +1,39 @@
 .hero {
     display: flex;
-    flex-direction: column;
+    flex-direction: space-between;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    min-height: 100px;
-    padding-bottom: 1rem;
+
+    min-height: 60vh; 
+    max-width: 1200px;  
+    margin: 0 auto;
+    padding: 3rem 2rem;
 }
 
-.browseButton {
-    background-color: green;
+.heroText {
+    flex: 2;
+    max-width: 480px;
+
+    /* add small gap betwen elements */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
+
+/* Limit paragraph lines to 50 characters */
+.heroText p:last-of-type {
+    max-width: 50ch;
+}
+
+.heroImage {
+    flex: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.heroImage img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
