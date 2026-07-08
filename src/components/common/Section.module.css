@@ -4,5 +4,6 @@
     padding: 3rem 2rem;
     background-color: var(--clr-surface);
     margin: 0 auto 3rem;
+    border: 2px solid var(--clr-border);
     border-radius: var(--radius);
 }   

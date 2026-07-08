@@ -13,8 +13,8 @@
     width: 100%;
     background-color: var(--clr-surface);
     padding: 1rem 5rem;
-    border: 2px solid var(--clr-border);
-    border-radius: var(--radius);
+    border-bottom: 2px solid var(--clr-border);
+    
 }
 
 /* THIS IS A PLACEHOLDER DIV FOR LOGO */
@@ -23,6 +23,7 @@
     border-radius: var(--radius);
     height: 80px;
     width: 80px;
+    margin-right: 2rem;
 
     /* 
     This flexbox alligns the "LOGO" text to the center
