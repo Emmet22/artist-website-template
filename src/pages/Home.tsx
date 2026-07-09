@@ -15,9 +15,9 @@ function Home() {
             name="Sample Collection Name"
             description="This is a sample collection description."
             pieces={[
-              { id: 1, imageURL: "https://placehold.co/150x150", description: "Sample desc 1" },
-              { id: 2, imageURL: "https://placehold.co/150x150", description: "Sample desc 2" },
-              { id: 3, imageURL: "https://placehold.co/150x150", description: "Sample desc 3" },
+              { id: 1, imageURL: "https://placehold.co/150x150", title: "title", description: "Sample desc 1" },
+              { id: 2, imageURL: "https://placehold.co/150x150", title: "title",description: "Sample desc 2" },
+              { id: 3, imageURL: "https://placehold.co/150x150", title: "title",description: "Sample desc 3" },
             ]}
           />  
         </Section>

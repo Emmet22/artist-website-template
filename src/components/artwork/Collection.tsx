@@ -3,6 +3,7 @@ import styles from "./Collection.module.css";
 
 export interface ArtPieceData {
     id: number;
+    title: string;
     imageURL: string;
     description: string;
 }
@@ -29,11 +30,13 @@ function Collection({name, description, pieces}: CollectionProps) {
                 <div className={styles.collectionInfo}>
                     <p>{description}</p>
                 </div>
+                
                 <div className={styles.collectionPieces}>
                     {pieces.map((piece) => 
                         <ArtPiece 
                         key={piece.id}
                         imageURL={piece.imageURL}
+                        title={piece.title}
                         description={piece.description}
                         />
                     )}

@@ -7,9 +7,9 @@ export const sampleCollections: CollectionData[] = [
         description: "Earthy tones inspired by forest floors and bark.",
         pieces: 
         [
-            { id: 1, imageURL: "sampleURL1", description: "Sample desc 1" },
-            { id: 2, imageURL: "sampleURL2", description: "Sample desc 2" },
-            { id: 3, imageURL: "sampleURL3", description: "Sample desc 3" },
+            { id: 1, imageURL: "sampleURL1", title: "title", description: "Sample desc 1" },
+            { id: 2, imageURL: "sampleURL2", title: "title", description: "Sample desc 2" },
+            { id: 3, imageURL: "sampleURL3", title: "title", description: "Sample desc 3" },
         ],
     },
     {
@@ -17,8 +17,8 @@ export const sampleCollections: CollectionData[] = [
         name: "Beach",
         description: "Sample beach collection desc",
         pieces: [
-            {id: 4, imageURL: "sampleURL4", description: "sample desc 4"},
-            {id: 5, imageURL: "sampleURL5", description: "sample desc 5"},
+            {id: 4, imageURL: "sampleURL4", title: "title", description: "sample desc 4"},
+            {id: 5, imageURL: "sampleURL5", title: "title", description: "sample desc 5"},
         ],
     },
 ];

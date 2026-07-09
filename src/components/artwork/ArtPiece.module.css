@@ -1,14 +1,61 @@
 .artPiece {
-    padding: 0.5rem;
-    border: 5px solid;
-    height: auto;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    
+    background-color: var(--clr-surface);
+    border: 2px solid var(--clr-border);
+    border-radius: var(--radius);
+
+    overflow: hidden; /* ensures that content doesnt go out of the div */
+
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    margin: 0.5rem;
+}   
+
+.artPiece:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
-.artContent {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.image {
+    width: 100%;
+    max-width:280px;
+    height: 250px;
+
+    object-fit: cover; /* ensures that the image covers the entire div */
+}
+
+.description {
     padding: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    border-bottom: 2px solid var(--clr-border);
+    width: 60%;
+    margin-bottom: 0.5rem;
+}
+
+.title h4 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.description p {
+    color: var(--clr-secondary);
+    line-height: 1.5;
+    text-align: center;
+    max-width: 30ch; /* limit width to 30 chars */
+}
+
+.artPiece button {
+    width: 100%;
+    border-radius: 0; /* remove border radius from button to match the card */
 }

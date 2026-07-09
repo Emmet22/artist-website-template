@@ -39,9 +39,11 @@
 
     /* Shadow */
     --shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.18);
+
 
     /* navbar glass effect */
-    --clr-surace-transparent: rgba(255, 255, 255, 0.7);
+    --clr-surface-transparent: rgba(255, 255, 255, 0.7);
 }
 
 /* base styles */

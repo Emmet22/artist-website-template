@@ -28,6 +28,7 @@
     flex: 3;
     display: flex;
     justify-content: center;
+    padding-left: 2rem;
 }
 
 .heroImage img {
