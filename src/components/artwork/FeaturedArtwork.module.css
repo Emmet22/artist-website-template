@@ -1,0 +1,8 @@
+.featuredArtwork {
+    margin-bottom: 2rem;
+}
+
+.pieces {
+    display: flex;
+    justify-content: center;
+}
