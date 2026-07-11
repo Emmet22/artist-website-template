@@ -3,6 +3,9 @@ import Section from "../components/common/Section";
 import Hero from "../components/common/Hero";
 import Collection from "../components/artwork/Collection";
 
+// import sample data
+import { sampleCollections } from "../data/SampleCollectionData";
+
 function Home() {
     return (
       <>
@@ -11,14 +14,7 @@ function Home() {
         <Section>
           <h2>Featured Collections</h2>
           <Collection 
-            key="1"
-            name="Sample Collection Name"
-            description="This is a sample collection description."
-            pieces={[
-              { id: 1, imageURL: "https://placehold.co/150x150", title: "title", description: "Sample desc 1" },
-              { id: 2, imageURL: "https://placehold.co/150x150", title: "title",description: "Sample desc 2" },
-              { id: 3, imageURL: "https://placehold.co/150x150", title: "title",description: "Sample desc 3" },
-            ]}
+            {...sampleCollections[0]}
           />  
         </Section>
 

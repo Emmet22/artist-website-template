@@ -1,6 +1,7 @@
-import type { CollectionData } from "../components/artwork/Collection";
+// import types
+import type {Collection} from "../types/Collection";
 
-export const sampleCollections: CollectionData[] = [
+export const sampleCollections: Collection[] = [
     {
         id: 1,
         name: "Woodland",

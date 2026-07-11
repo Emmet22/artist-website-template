@@ -1,13 +1,12 @@
+// import styles
 import styles from './ArtPiece.module.css';
 
-interface ArtPieceProps {
-    imageURL: string;
-    title: string;
-    description: string;
-}
+// import types
+import type { ArtPiece as ArtPieceType } from '../../types/ArtPiece';
 
+interface ArtPieceProps extends Omit<ArtPieceType, "id"> {}
 
-function ArtPiece({ imageURL, title, description }: ArtPieceProps) {
+function ArtPiece({ imageURL, title, description, avaliable, price }: ArtPieceProps) {
     return (
         <div className={styles.artPiece}>
 
@@ -24,7 +23,10 @@ function ArtPiece({ imageURL, title, description }: ArtPieceProps) {
                 <p>{description}</p>
             </div>
 
-            <button className="enquireButton">ENQUIRE</button>
+            <button className="enquireButton">
+                {/* N.B. to display the {price} the char ` must be used not ' or "*/}
+                {avaliable ? `BUY €${price}` : "ENQUIRE"}
+            </button>
         </div>
             
 );

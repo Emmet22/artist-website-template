@@ -1,25 +1,13 @@
+// import components
 import ArtPiece from "./ArtPiece";
+
+// import styles
 import styles from "./Collection.module.css";
 
-export interface ArtPieceData {
-    id: number;
-    title: string;
-    imageURL: string;
-    description: string;
-}
+// import types
+import type { Collection as CollectionType } from "../../types/Collection";
 
-export interface CollectionData {
-    id: number;
-    name: string;
-    description: string;
-    pieces: ArtPieceData[];
-}
-
-interface CollectionProps {
-    name: string;
-    description: string;
-    pieces: ArtPieceData[];
-}
+interface CollectionProps extends CollectionType {}
 
 function Collection({name, description, pieces}: CollectionProps) {
     return (
@@ -35,9 +23,7 @@ function Collection({name, description, pieces}: CollectionProps) {
                     {pieces.map((piece) => 
                         <ArtPiece 
                         key={piece.id}
-                        imageURL={piece.imageURL}
-                        title={piece.title}
-                        description={piece.description}
+                        {...piece}
                         />
                     )}
                 </div>
