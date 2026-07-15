@@ -14,11 +14,7 @@ function FeaturedArtwork() {
                 {featuredArtworkData.map((artPiece) => (
                     <ArtPiece
                         key={artPiece.id}
-                        imageURL={artPiece.imageURL}
-                        title={artPiece.title}
-                        description={artPiece.description}
-                        price={artPiece.price}
-                        avaliable={artPiece.avaliable}
+                        {...artPiece}
                     />
                 ))   
                 }

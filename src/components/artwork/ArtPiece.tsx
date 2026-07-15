@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 interface ArtPieceProps extends ArtPieceType {}
 
-function ArtPiece({ id, imageURL, title, description, avaliable, price }: ArtPieceProps) {
+function ArtPiece({ id, imageURL, title, description, available, price }: ArtPieceProps) {
     return (
         <Link to={`/art/${id}`}>
         
@@ -30,7 +30,7 @@ function ArtPiece({ id, imageURL, title, description, avaliable, price }: ArtPie
 
                 <button className="enquireButton">
                     {/* N.B. to display the {price} the char ` must be used not ' or "*/}
-                    {avaliable ? `BUY €${price}` : "ENQUIRE"}
+                    {available ? `BUY €${price}` : "ENQUIRE"}
                 </button>
             </div>
         </Link>        

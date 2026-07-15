@@ -1,8 +1,7 @@
-import type {ArtPiece} from './ArtPiece';
+//import type {ArtPiece} from './ArtPiece';
 
 export interface Collection {
     id: number;
     name: string;
     description: string;
-    pieces: ArtPiece[];
 }

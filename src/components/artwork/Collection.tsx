@@ -7,9 +7,17 @@ import styles from "./Collection.module.css";
 // import types
 import type { Collection as CollectionType } from "../../types/Collection";
 
+// import data
+import { artworkData } from "../../data/ArtPieceData";
+
 interface CollectionProps extends CollectionType {}
 
-function Collection({name, description, pieces}: CollectionProps) {
+function Collection({id, name, description}: CollectionProps) {
+    
+    const collectionPieces = artworkData.filter(
+        piece => piece.collectionId === id
+    );
+    
     return (
         <div className={styles.collection}>
             <h2>{name}</h2>
@@ -20,7 +28,7 @@ function Collection({name, description, pieces}: CollectionProps) {
                 </div>
                 
                 <div className={styles.collectionPieces}>
-                    {pieces.map((piece) => 
+                    {collectionPieces.map((piece) => 
                         <ArtPiece 
                         key={piece.id}
                         {...piece}
