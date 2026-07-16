@@ -20,7 +20,7 @@ function FeaturedArtwork() {
                 }
             
             </div>
-            <button className="btn">Browse All</button>
+            
         </div>
     );
 }
