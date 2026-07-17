@@ -1,0 +1,27 @@
+.aboutHero {
+    padding-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.heroImage img{
+    border-radius: var(--radius);
+}
+
+.heroText H1{
+    border-bottom: 2px solid var(--clr-border);
+    margin-bottom: 1rem;
+}
+
+.callToAction {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.callToAction h2 {
+    border-bottom: 2px solid var(--clr-border);
+}
