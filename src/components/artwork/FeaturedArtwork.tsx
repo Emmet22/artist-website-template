@@ -1,9 +1,13 @@
 import styles from './FeaturedArtwork.module.css';
 import ArtPiece from './ArtPiece';
 
-import { featuredArtworkData } from '../../data/FeaturedArtWorkData';
+import { artworkData } from '../../data/ArtPieceData';
 
 function FeaturedArtwork() {
+
+    // filter available pieces
+    const availablePieces = artworkData.filter((piece) => piece.available); 
+
     return (
         <div className={styles.featuredArtwork}>
             <h2>Avaliable to purchase</h2>
@@ -11,7 +15,7 @@ function FeaturedArtwork() {
 
             <div className={styles.pieces}>
                 
-                {featuredArtworkData.map((artPiece) => (
+                {availablePieces.map((artPiece) => (
                     <ArtPiece
                         key={artPiece.id}
                         {...artPiece}
