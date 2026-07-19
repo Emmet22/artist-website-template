@@ -62,11 +62,25 @@ function ArtDetail() {
                         </div>
 
                         <div className={styles.purchaseSection}>
-                            <p className={styles.price}>€{artPiece.price}</p>
-                            <button className='btn'>BUY NOW</button>
+
+                            { /* conditional logic to show purchase if piece is available and enquire if piece is not available */
+                                artPiece.available ? (
+                                    <>
+                                        <p className={styles.price}>
+                                            €{artPiece.price}
+                                        </p>
+                                        <button className='btn'>BUY NOW</button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <p>
+                                            Interested in creating your own version of this piece? 
+                                        </p>
+                                        <button className='btn'>CREATE YOUR PIECE</button>
+                                    </>
+                                )
+                            }
                         </div>
-                        
-                        
                     </div>
                 </div>
             </Section>

@@ -11,6 +11,7 @@ interface ArtPieceProps extends ArtPieceType {}
 
 function ArtPiece({ id, imageURL, title, description, available, price }: ArtPieceProps) {
     return (
+        <>
         <Link to={`/art/${id}`}>
         
             <div className={styles.artPiece}>
@@ -33,7 +34,8 @@ function ArtPiece({ id, imageURL, title, description, available, price }: ArtPie
                     {available ? `BUY €${price}` : "ENQUIRE"}
                 </button>
             </div>
-        </Link>        
+        </Link>
+        </>        
 );
 }
 
