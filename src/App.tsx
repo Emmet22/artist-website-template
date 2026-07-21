@@ -11,6 +11,7 @@ import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import ArtDetail from "./pages/ArtDetail";
+import CommissionBuilder from "./pages/CommissionBuilder";
 
 import "./styles/App.css";
 
@@ -25,7 +26,9 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        
         <Route path="/art/:id" element={<ArtDetail />} />
+        <Route path="/commission/:id" element={<CommissionBuilder />} />
       </Routes>
     </main>
     <Footer />

@@ -1,5 +1,6 @@
 import {useParams} from 'react-router-dom';
 import styles from './ArtDetail.module.css';
+import { Link } from 'react-router-dom';
 
 // import data
 import { artworkData } from '../data/ArtPieceData';
@@ -76,7 +77,7 @@ function ArtDetail() {
                                         <p>
                                             Interested in creating your own version of this piece? 
                                         </p>
-                                        <button className='btn'>CREATE YOUR PIECE</button>
+                                        <Link to={`/commission/${artPiece.id}`} className='btn'>CREATE YOUR PIECE</Link>
                                     </>
                                 )
                             }
