@@ -19,5 +19,4 @@ export interface ArtPiece {
     frameOptions: FrameOption[];
     materialOptions: MaterialOption[];
 
-
 }

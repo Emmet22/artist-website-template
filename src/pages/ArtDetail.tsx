@@ -9,6 +9,7 @@ import { sampleCollections } from '../data/SampleCollectionData';
 // import components
 import FeaturedArtwork from "../components/artwork/FeaturedArtwork";
 import Section from "../components/common/Section";
+import ArtWorkPreview from "../components/artwork/ArtWorkPreview";
 
 function ArtDetail() {
 
@@ -42,48 +43,27 @@ function ArtDetail() {
     return (
         <main>
             <Section>
-                <div className={styles.artContent}>
-                    <div className={styles.imgContainer}>
-                        <img 
-                            className={styles.artImage}
-                            src={artPiece.imageURL}
-                            alt={artPiece.title}
-                        />
+                <ArtWorkPreview artPiece={artPiece} collection={collection}>
+                    <div className={styles.purchaseSection}>
+                        { /* conditional logic to show purchase if piece is available and enquire if piece is not available */
+                            artPiece.available ? (
+                                <>
+                                    <p className={styles.price}>
+                                        €{artPiece.price}
+                                    </p>
+                                    <button className='btn'>BUY NOW</button>
+                                </>
+                            ) : (
+                                <>
+                                    <p>
+                                        Interested in creating your own version of this piece? 
+                                    </p>
+                                    <Link to={`/commission/${artPiece.id}`} className='btn'>CREATE YOUR PIECE</Link>
+                                </>
+                            )
+                        }
                     </div>
-
-                    <div className={styles.infoContainer}>
-                        <div className={styles.infoSection}>
-                            <h1 className={styles.artTitle}>{artPiece.title}</h1>
-                            <p>{artPiece.description}</p>
-                        </div>
-
-                        <div className={styles.infoSection}>
-                            <h3 className={styles.collectionName}>{collection.name}</h3>
-                            <p>{collection.description}</p>
-                        </div>
-
-                        <div className={styles.purchaseSection}>
-
-                            { /* conditional logic to show purchase if piece is available and enquire if piece is not available */
-                                artPiece.available ? (
-                                    <>
-                                        <p className={styles.price}>
-                                            €{artPiece.price}
-                                        </p>
-                                        <button className='btn'>BUY NOW</button>
-                                    </>
-                                ) : (
-                                    <>
-                                        <p>
-                                            Interested in creating your own version of this piece? 
-                                        </p>
-                                        <Link to={`/commission/${artPiece.id}`} className='btn'>CREATE YOUR PIECE</Link>
-                                    </>
-                                )
-                            }
-                        </div>
-                    </div>
-                </div>
+                </ArtWorkPreview>
             </Section>
 
             <Section>
