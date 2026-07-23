@@ -1,0 +1,6 @@
+/*
+    This component will do the calculation for
+    getting the updated price based off the 
+    selected cusomtisation options and it 
+    will update in real time.
+*/

@@ -3,10 +3,14 @@ import {useParams} from 'react-router-dom';
 // import data
 import { artworkData } from '../data/ArtPieceData';
 import { sampleCollections } from '../data/SampleCollectionData';
+import { sizeOptions, frameOptions, materialOptions } from '../data/CommissionOptionsData';
 
 // import components
 import Section from "../components/common/Section";
 import ArtWorkPreview from "../components/artwork/ArtWorkPreview";
+import CustomisationPanel from "../components/commission/CustomisationPanel";
+
+
 
 function CommissionBuilder() {
 
@@ -42,12 +46,25 @@ function CommissionBuilder() {
     return (
         <main>
             <Section>
+                <h1>Create your piece</h1>
+                <p>
+                    Bring the artwork to life with your own 
+                    choice of size, material and frame.
+                </p>
+            </Section>
+
+            <Section>
                 <ArtWorkPreview artPiece={artPiece} collection={collection} />
             </Section>
 
             <Section>
-                <h2>Customise your piece </h2>
+                <CustomisationPanel 
+                    sizes={sizeOptions}
+                    frames={frameOptions}
+                    materials={materialOptions}
+                />
             </Section>
+
         </main>
     );
 }

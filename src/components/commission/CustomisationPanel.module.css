@@ -1,0 +1,51 @@
+.panel {
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.panel h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+
+    border-bottom: 2px solid var(--clr-border);
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.option select {
+    padding: 0.75rem;
+}
+
+.summary {
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    border-top: 2px solid var(--clr-border);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.summary h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+}
