@@ -39,20 +39,19 @@ function CommissionBuilder() {
         );
     }
 
-    // get customisation options
-
-    // calculate price based on selected options
-
     return (
         <main>
+            {/*
             <Section>
-                <h1>Create your piece</h1>
+                <h1>Create your own vision</h1>
                 <p>
-                    Bring the artwork to life with your own 
-                    choice of size, material and frame.
+                    Personalise this artwork by choosing your perferred size, material
+                    and frame. Your final price updates automatically based on your 
+                    selections.
                 </p>
             </Section>
-
+            */}
+            
             <Section>
                 <ArtWorkPreview artPiece={artPiece} collection={collection} />
             </Section>

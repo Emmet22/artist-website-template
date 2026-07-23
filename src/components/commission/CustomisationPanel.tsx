@@ -7,6 +7,9 @@
     - size.
     - matertial.
     - frame.
+
+    N.B. the selected values are controled by the 
+    CommissionBuilder page.
 */
 
 // import styles
@@ -24,59 +27,131 @@ interface CustomisationPanelProps {
     materials: MaterialOption[];
 }
 
+// function for fixing the price modifier 
+function formatPriceModifier(priceModifier: number) { 
+    if (priceModifier == 0) {
+        return "Included";
+    }
+    if (priceModifier > 0) {
+        return `+€${priceModifier}`;
+    }
+    return `-€${Math.abs(priceModifier)}`;
+}
+
 function CustomisationPanel({sizes, frames, materials}: CustomisationPanelProps) {
     return (
         <div className={styles.panel}>
-            <h2>Customisatise your piece</h2>
+            
+            <h2>Customise your piece</h2>
+           
+            {/* size options */}
+            <div className={styles.section}>
+                <div className={styles.sectionTitle}>
+                    <h3>Select Size</h3>
+                </div>
 
-            <div className={styles.option}>
-                <label>Size</label>
-                <select>
+                <div className={styles.options}>
                     {
                         sizes.map(size => (
-                            <option
-                                key={size.id} 
-                                value={size.id} 
+                            <label
+                                key={size.id}
+                                className={styles.optionCard}
                             >
-                                {size.name}
-                            </option>
+                                <input 
+                                    type="radio"
+                                    name="size"
+                                    value={size.id}
+                                />
+
+                                <div>
+                                    <h4>
+                                        {size.name}
+                                    </h4>
+                                    
+                                    <p>
+                                        {size.width}cm x {size.height}cm
+                                    </p>
+
+                                    <span>
+                                        {formatPriceModifier(size.priceModifier)}
+                                    </span>
+                                </div>
+
+                            </label>
                         ))
                     }
-                </select>
+                </div>
             </div>
 
-            <div className={styles.option}> 
-                <label>Material</label>
-                <select>
+            {/* material options */}
+            <div className={styles.section}>
+                <div className={styles.sectionTitle}>
+                    <h3>Select Material</h3>
+                </div>
+
+                <div className={styles.options}>
                     {
                         materials.map(material => (
-                            <option
-                                key={material.id} 
-                                value={material.id}
+                            <label 
+                                key={material.id}
+                                className={styles.optionCard}
                             >
-                                {material.name}
-                            </option>
+
+                                <input 
+                                    type="radio"
+                                    name="material"
+                                    value={material.id}
+                                />
+
+                                <div>
+                                    <h4>
+                                        {material.name}
+                                    </h4>
+                                    <span>
+                                        {formatPriceModifier(material.priceModifier)}
+                                    </span>
+                                </div>
+
+                            </label>
                         ))
                     }
-                </select>
+                </div>
             </div>
             
-            <div className={styles.option}>
-                <label>Frame</label>
-                <select>
+            {/* frame options */}
+            <div className={styles.section}>
+                <div className={styles.sectionTitle}>
+                    <h3>Select Frame</h3>
+                </div>
+                <div className={styles.options}>
                     {
-                    frames.map(frame => (
-                        <option
-                            key={frame.id}
-                            value={frame.id}
-                        >
-                            {frame.name}
-                        </option>
-                    ))
+                        frames.map(frame => (
+                            <label 
+                                key={frame.id}
+                                className={styles.optionCard}
+                            >
+                                <input
+                                    type="radio"
+                                    name="frame"
+                                    value={frame.id}
+                                />
+                                <div>
+                                    <h4>
+                                        {frame.name}   
+                                    </h4>
+                                    <p>
+                                        {frame.color}
+                                    </p>
+                                    <span>
+                                        {formatPriceModifier(frame.priceModifier)}
+                                    </span>
+                                </div>
+                            </label>
+                        ))
                     }
-                </select>
-            </div>
-            
+                </div>
+            </div>  
+
             <div className={styles.summary}>
                 <h3>Estimated Price</h3>
                 <p>€XXX</p>
