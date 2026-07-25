@@ -1,0 +1,17 @@
+.livePreview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.livePreview img {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+
+}

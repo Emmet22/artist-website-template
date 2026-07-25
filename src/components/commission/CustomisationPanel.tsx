@@ -60,8 +60,6 @@ function CustomisationPanel({
 }: CustomisationPanelProps) {
     return (
         <div className={styles.panel}>
-            
-            <h2>Customise your piece</h2>
            
             {/* size options */}
             <div className={styles.section}>

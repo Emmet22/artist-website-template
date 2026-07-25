@@ -36,8 +36,8 @@
 .options {
     display: grid;
     grid-template-columns: repeat(
-        auto-fit,
-        minmax(200px, 1fr)
+        3,
+        minmax(120px, 1fr)
     );
 
     gap: 1rem;
@@ -46,7 +46,7 @@
 .optionCard {
     border: 2px solid var(--clr-border);
     border-radius: var(--radius);
-    padding: 1.5rem;
+    padding: 0.5rem;
     cursor: pointer;
 
     transition:
@@ -72,7 +72,6 @@
 
 .optionCard h4 {
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
     font-size: 1.25rem;
 }
 

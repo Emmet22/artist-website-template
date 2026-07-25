@@ -8,14 +8,17 @@ import { sizeOptions, frameOptions, materialOptions } from '../data/CommissionOp
 
 // import components
 import Section from "../components/common/Section";
-import ArtWorkPreview from "../components/artwork/ArtWorkPreview";
 import CustomisationPanel from "../components/commission/CustomisationPanel";
 import PriceSummary from "../components/commission/PriceSummary";
+import LivePreview from "../components/commission/LivePreview";
 
 // import types
 import type { SizeOption } from '../types/SizeOption';
 import type { MaterialOption } from '../types/MaterialOption';
 import type { FrameOption } from '../types/FrameOption';
+
+// import styles
+import styles from './CommissionBuilder.module.css';
 
 function CommissionBuilder() {
 
@@ -51,42 +54,45 @@ function CommissionBuilder() {
 
     return (
         <main>
-            {/*
+
             <Section>
-                <h1>Create your own vision</h1>
-                <p>
-                    Personalise this artwork by choosing your perferred size, material
-                    and frame. Your final price updates automatically based on your 
-                    selections.
-                </p>
-            </Section>
-            */}
+                <div className={styles.heading}>
+                    <h2>Create your piece</h2>
+                </div>
+
+                <div className={styles.configurator}>
+
+                    <div className={styles.previewColumn}>
+                        <LivePreview 
+                            artPiece={artPiece}
+                        />
+                    </div>
+
+                    <div className={styles.optionsColumn}>
+                        <CustomisationPanel 
+                            sizes={sizeOptions}
+                            frames={frameOptions}
+                            materials={materialOptions}
+
+                            selectedSize={selectedSize}
+                            selectedMaterial={selectedMaterial}
+                            selectedFrame={selectedFrame}
+
+                            setSelectedSize={setSelectedSize}
+                            setSelectedMaterial={setSelectedMaterial}
+                            setSelectedFrame={setSelectedFrame}
+                        />
+
+                         <PriceSummary 
+                            basePrice={artPiece.price ?? 300} // basic price e.g. €300
+                            selectedSize={selectedSize}
+                            selectedMaterial={selectedMaterial}
+                            selectedFrame={selectedFrame}
+                        />
+                    </div>
+
+                </div>
             
-            <Section>
-                <ArtWorkPreview artPiece={artPiece} collection={collection} />
-            </Section>
-
-            <Section>
-                <CustomisationPanel 
-                    sizes={sizeOptions}
-                    frames={frameOptions}
-                    materials={materialOptions}
-
-                    selectedSize={selectedSize}
-                    selectedMaterial={selectedMaterial}
-                    selectedFrame={selectedFrame}
-
-                    setSelectedSize={setSelectedSize}
-                    setSelectedMaterial={setSelectedMaterial}
-                    setSelectedFrame={setSelectedFrame}
-                />
-
-                <PriceSummary 
-                    basePrice={artPiece.price ?? 300} // basic price e.g. €300
-                    selectedSize={selectedSize}
-                    selectedMaterial={selectedMaterial}
-                    selectedFrame={selectedFrame}
-                />
             </Section>
             
         </main>
