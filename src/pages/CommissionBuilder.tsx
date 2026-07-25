@@ -1,4 +1,5 @@
 import {useParams} from 'react-router-dom';
+import { useState } from 'react';
 
 // import data
 import { artworkData } from '../data/ArtPieceData';
@@ -9,8 +10,12 @@ import { sizeOptions, frameOptions, materialOptions } from '../data/CommissionOp
 import Section from "../components/common/Section";
 import ArtWorkPreview from "../components/artwork/ArtWorkPreview";
 import CustomisationPanel from "../components/commission/CustomisationPanel";
+import PriceSummary from "../components/commission/PriceSummary";
 
-
+// import types
+import type { SizeOption } from '../types/SizeOption';
+import type { MaterialOption } from '../types/MaterialOption';
+import type { FrameOption } from '../types/FrameOption';
 
 function CommissionBuilder() {
 
@@ -39,6 +44,11 @@ function CommissionBuilder() {
         );
     }
 
+    // ensure small canvas with black frame are the default selected options
+    const [selectedSize, setSelectedSize] = useState<SizeOption>(sizeOptions[0]);
+    const [selectedMaterial, setSelectedMaterial] = useState<MaterialOption>(materialOptions[0]);
+    const [selectedFrame, setSelectedFrame] = useState<FrameOption>(frameOptions[0]);
+
     return (
         <main>
             {/*
@@ -61,9 +71,24 @@ function CommissionBuilder() {
                     sizes={sizeOptions}
                     frames={frameOptions}
                     materials={materialOptions}
+
+                    selectedSize={selectedSize}
+                    selectedMaterial={selectedMaterial}
+                    selectedFrame={selectedFrame}
+
+                    setSelectedSize={setSelectedSize}
+                    setSelectedMaterial={setSelectedMaterial}
+                    setSelectedFrame={setSelectedFrame}
+                />
+
+                <PriceSummary 
+                    basePrice={artPiece.price ?? 300} // basic price e.g. €300
+                    selectedSize={selectedSize}
+                    selectedMaterial={selectedMaterial}
+                    selectedFrame={selectedFrame}
                 />
             </Section>
-
+            
         </main>
     );
 }

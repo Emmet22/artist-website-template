@@ -25,6 +25,15 @@ interface CustomisationPanelProps {
     sizes: SizeOption[];
     frames: FrameOption[];
     materials: MaterialOption[];
+
+    // for use state
+    selectedSize: SizeOption;
+    selectedMaterial: MaterialOption;
+    selectedFrame: FrameOption;
+
+    setSelectedSize: React.Dispatch<React.SetStateAction<SizeOption>>;
+    setSelectedMaterial: React.Dispatch<React.SetStateAction<MaterialOption>>;
+    setSelectedFrame: React.Dispatch<React.SetStateAction<FrameOption>>;
 }
 
 // function for fixing the price modifier 
@@ -38,7 +47,17 @@ function formatPriceModifier(priceModifier: number) {
     return `-€${Math.abs(priceModifier)}`;
 }
 
-function CustomisationPanel({sizes, frames, materials}: CustomisationPanelProps) {
+function CustomisationPanel({
+    sizes, 
+    frames, 
+    materials,
+    selectedSize,
+    selectedMaterial,
+    selectedFrame,
+    setSelectedSize,
+    setSelectedMaterial,
+    setSelectedFrame
+}: CustomisationPanelProps) {
     return (
         <div className={styles.panel}>
             
@@ -60,7 +79,8 @@ function CustomisationPanel({sizes, frames, materials}: CustomisationPanelProps)
                                 <input 
                                     type="radio"
                                     name="size"
-                                    value={size.id}
+                                    checked={selectedSize.id === size.id}
+                                    onChange={() => setSelectedSize(size)}
                                 />
 
                                 <div>
@@ -100,7 +120,8 @@ function CustomisationPanel({sizes, frames, materials}: CustomisationPanelProps)
                                 <input 
                                     type="radio"
                                     name="material"
-                                    value={material.id}
+                                    checked={selectedMaterial.id === material.id}
+                                    onChange={() => setSelectedMaterial(material)}
                                 />
 
                                 <div>
@@ -133,7 +154,8 @@ function CustomisationPanel({sizes, frames, materials}: CustomisationPanelProps)
                                 <input
                                     type="radio"
                                     name="frame"
-                                    value={frame.id}
+                                    checked={selectedFrame.id === frame.id}
+                                    onChange={() => setSelectedFrame(frame)}
                                 />
                                 <div>
                                     <h4>
@@ -152,13 +174,6 @@ function CustomisationPanel({sizes, frames, materials}: CustomisationPanelProps)
                 </div>
             </div>  
 
-            <div className={styles.summary}>
-                <h3>Estimated Price</h3>
-                <p>€XXX</p>
-                <button className="btn">
-                    PURCHASE
-                </button>
-            </div>
         </div>
     );
 }
