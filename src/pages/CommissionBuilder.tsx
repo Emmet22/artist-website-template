@@ -25,10 +25,9 @@ function CommissionBuilder() {
     // get artPiece ID from URL
     const {id: artPieceId} = useParams();
 
-    // fetch the artwork data
-    const artPiece = artworkData.find(
-        piece => piece.id === Number(artPieceId)
-    );
+    // Fetch artwork data, provide first artwork as default if not id is provided (for navbar routing)
+    const artPiece = artworkData.find(piece => piece.id === Number(artPieceId)) ?? artworkData[0];
+
 
     if (!artPiece) {
         return (

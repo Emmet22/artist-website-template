@@ -11,6 +11,7 @@ function Navbar() {
       <ul className={styles.navLinks}>
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/gallery">GALLERY</Link></li>
+        <li><Link to="/commission">CREATE YOUR PIECE</Link></li>
         <li><Link to="/about">ABOUT</Link></li>
         <li><Link to="/contact">CONTACT</Link></li>
       </ul>

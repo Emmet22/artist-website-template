@@ -26,7 +26,8 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        
+        <Route path="/commission" element={<CommissionBuilder />} />
+
         <Route path="/art/:id" element={<ArtDetail />} />
         <Route path="/commission/:id" element={<CommissionBuilder />} />
       </Routes>
