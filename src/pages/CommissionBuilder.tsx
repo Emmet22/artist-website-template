@@ -65,6 +65,10 @@ function CommissionBuilder() {
                     <div className={styles.previewColumn}>
                         <LivePreview 
                             artPiece={artPiece}
+                            collection={collection}
+                            selectedSize={selectedSize}
+                            selectedMaterial={selectedMaterial}
+                            selectedFrame={selectedFrame}
                         />
                     </div>
 

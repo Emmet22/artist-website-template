@@ -1,17 +1,52 @@
 .livePreview {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    flex-direction: column;
+
+    gap:2rem;
+    padding:2rem;
+
+    border: 2px solid var(--clr-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
-.livePreview img {
+.previewImage {
     width: 100%;
-    max-width: 600px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    border-radius: var(--radius);
+}
 
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+.previewInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
 
+.previewInfo h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--clr-accent);
+}
+
+.previewInfo h3 {
+    text-transform: uppercase;
+}
+
+.collectionName {
+    color: var(--clr-accent);
+}
+
+.currentSelection {
+    border-top: 2px solid var(--clr-border);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.currentSelection h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
