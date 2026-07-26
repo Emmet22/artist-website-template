@@ -11,6 +11,7 @@ import Section from "../components/common/Section";
 import CustomisationPanel from "../components/commission/CustomisationPanel";
 import PriceSummary from "../components/commission/PriceSummary";
 import LivePreview from "../components/commission/LivePreview";
+import ArtworkSelector from "../components/commission/ArtworkSelector";
 
 // import types
 import type { SizeOption } from '../types/SizeOption';
@@ -26,10 +27,14 @@ function CommissionBuilder() {
     const {id: artPieceId} = useParams();
 
     // Fetch artwork data, provide first artwork as default if not id is provided (for navbar routing)
-    const artPiece = artworkData.find(piece => piece.id === Number(artPieceId)) ?? artworkData[0];
+    const initialArtPiece = artworkData.find(
+        piece => piece.id === Number(artPieceId)
+    ) ?? artworkData[0];
 
+    // add art piece to react state
+    const [selectedArtPiece, setSelectedArtPiece] = useState(initialArtPiece);
 
-    if (!artPiece) {
+    if (!initialArtPiece) {
         return (
             <h2>ART PIECE NOT FOUND</h2>
         );
@@ -37,7 +42,7 @@ function CommissionBuilder() {
 
     // fetch the collection data
     const collection = sampleCollections.find(
-        collection => collection.id === artPiece.collectionId
+        collection => collection.id === initialArtPiece.collectionId
     );
 
     if (!collection) {
@@ -45,6 +50,12 @@ function CommissionBuilder() {
             <h2>COLLECTION NOT FOUND</h2>
         );
     }
+
+    // find data for the artwork selector
+    const commissionArtWorks = artworkData
+        .filter(piece => !piece.available) // piece cannot be ready for purchase
+        .filter(piece => piece.id !== selectedArtPiece.id) // piece cannot be the currently selected piece
+        .slice(0, 3); // limit to 3 pieces
 
     // ensure small canvas with black frame are the default selected options
     const [selectedSize, setSelectedSize] = useState<SizeOption>(sizeOptions[0]);
@@ -63,7 +74,7 @@ function CommissionBuilder() {
 
                     <div className={styles.previewColumn}>
                         <LivePreview 
-                            artPiece={artPiece}
+                            artPiece={selectedArtPiece}
                             collection={collection}
                             selectedSize={selectedSize}
                             selectedMaterial={selectedMaterial}
@@ -87,7 +98,7 @@ function CommissionBuilder() {
                         />
 
                          <PriceSummary 
-                            basePrice={artPiece.price ?? 300} // basic price e.g. €300
+                            basePrice={selectedArtPiece.price ?? 300} // basic price e.g. €300
                             selectedSize={selectedSize}
                             selectedMaterial={selectedMaterial}
                             selectedFrame={selectedFrame}
@@ -98,6 +109,14 @@ function CommissionBuilder() {
             
             </Section>
             
+            <Section>
+                <ArtworkSelector
+                    pieces={commissionArtWorks}
+                    selectedArtPiece={selectedArtPiece}
+                    setSelectedArtPiece={setSelectedArtPiece}
+                />
+            </Section>
+
         </main>
     );
 }
