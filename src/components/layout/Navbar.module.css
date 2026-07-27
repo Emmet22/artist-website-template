@@ -2,10 +2,11 @@
     /* Making the navbar sticky */
     position: sticky;
     top: 0;
+    z-index: 1000; /* fixes hover */
 
     /* blurred glass filter */
     backdrop-filter: blur(20px);
-    background: var(--clr-surace-transparent);
+    background: var(--clr-surface-transparen);
     
     /* Updated layout to be flexbox */
     display: flex;

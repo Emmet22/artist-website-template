@@ -41,7 +41,7 @@
 
 
     /* navbar glass effect */
-    --clr-surface-transparent: rgba(255, 255, 255, 0.7);
+    --clr-surface-transparent: rgba(255, 255, 255, 0.35);
 }
 
 /* base styles */
