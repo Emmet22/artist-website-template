@@ -3,6 +3,17 @@
     height: 200px;
     perspective: 1000px;
     cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card:focus-visible {
+    outline: 2px solid var(--clr-accent);
+    outline-offset: 4px;
 }
 
 .cardContent {
@@ -37,11 +48,6 @@
     text-align: center;
 
     backface-visibility: hidden;
-}
-
-.cardFront:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
 }
 
 .cardBack {
