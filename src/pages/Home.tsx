@@ -1,10 +1,15 @@
+import styles from "./Home.module.css";
+
 // import components
 import Section from "../components/common/Section";
 import Hero from "../components/common/Hero";
 import Collection from "../components/artwork/Collection";
+import FlipCard from "../components/common/FlipCard";
+import Timeline from "../components/common/Timeline";
 
 // import sample data
 import { sampleCollections } from "../data/SampleCollectionData";
+import { processSteps } from "../data/ProcessSteps";
 
 function Home() {
     return (
@@ -30,22 +35,31 @@ function Home() {
               completely unique.
             </p>
 
-            {/*
-              add section cards here
-              1 handcrafted by the artist
-              2 unique one of a kind
-              3 ready to display
-            */}
+            <div className={styles.flipCardContainer}>
+              <FlipCard 
+                title="Handcrafted"
+                frontText="Each piece is handcrafted by the artist using traditional techniques."
+                backText="Each piece is carefully designed, poured and finished by hand, ensuring attention to detail."
+              />
+
+              <FlipCard 
+                title="One of a kind"
+                frontText="No two pieces are ever exactly the same."
+                backText="The natural movement of colour and texture means every artwork develops its own unique patterns and character."
+              />
+
+              <FlipCard 
+                title="Ready To Display"
+                frontText="Professionally finished and prepared for your home."
+                backText="Each artwork is completed with quality materials and finishing touches so it can be enjoyed immediately."
+              />
+            </div>
         </Section>
 
         <Section>
           <h3>The Process</h3>
-          <ul>
-            <li><p>Find piece you like</p></li>
-            <li><p>Enquire to artist to cmossion a piece from the collection</p></li>
-            <li><p>Artist approves commission</p></li>
-            <li><p>You recieve your piece, with a certificate of uniqueness</p></li>
-          </ul>
+
+          <Timeline steps={processSteps} />
         </Section>
 
         <Section> 
