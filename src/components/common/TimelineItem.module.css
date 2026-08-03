@@ -1,0 +1,77 @@
+.item {
+    width:100%;
+
+    display:grid;
+    grid-template-columns: 1fr 60px 1fr;
+
+    align-items:center;
+}
+
+
+/* number stays in centre */
+.number {
+    grid-column:2;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:var(--clr-accent);
+    color:var(--clr-primary);
+
+    font-weight:bold;
+
+    box-shadow:var(--shadow);
+
+    z-index:2;
+}
+
+
+/* card */
+.card {
+    width:350px;
+
+    padding:1.5rem;
+
+    background-color:var(--clr-surface);
+
+    border:2px solid var(--clr-border);
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.cardTitle {
+    text-transform:uppercase;
+    letter-spacing:.1rem;
+    margin-bottom:.5rem;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-hover);
+}
+
+/* Card LEFT of number */
+.left .card {
+
+    grid-column:1;
+    justify-self:end;
+    margin-right:1rem;
+}
+
+/* Card RIGHT of number */
+.right .card {
+    grid-column:3;
+    justify-self:start;
+    margin-left:1rem;
+}

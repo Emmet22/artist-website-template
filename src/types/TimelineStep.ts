@@ -1,5 +1,5 @@
 export interface TimelineStep {
-    stepNumber: string;
+    id: number;
     title: string;
     description: string;
 }

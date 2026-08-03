@@ -58,7 +58,9 @@ function Home() {
 
         <Section>
           <h3>The Process</h3>
-
+          <p>
+            Become a collector and recieve a personalised piece through our 4 step commission process.
+          </p>
           <Timeline steps={processSteps} />
         </Section>
 
