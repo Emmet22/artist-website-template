@@ -19,9 +19,23 @@ function Home() {
         </Section>
 
         <Section> 
-            <h3>Why each piece is unique</h3>
-            <p>Each piece is unique sample text sample description etc etc etc</p>
+            <h3>Why choose original artwork</h3>
+            <p>
+              Every artwork is individually handcrafted using premium materials 
+              and professional finishing techniques.
+            </p>
+            <p>
+              Unlike mass-produced prints, every pour creates patterns 
+              that can never be recreated, making every commission 
+              completely unique.
+            </p>
 
+            {/*
+              add section cards here
+              1 handcrafted by the artist
+              2 unique one of a kind
+              3 ready to display
+            */}
         </Section>
 
         <Section>
@@ -35,8 +49,13 @@ function Home() {
         </Section>
 
         <Section> 
-          <h3>Be the first to hear about new collections</h3>
-          <p>EMAIL LIST SIGN UP - WORK IN PRGRESS</p>
+          <h3>STAY CONNECTED</h3>
+          <p>
+            Receive updates about new collections, 
+            exclusive releases and behind-the-scenes studio stories.
+          </p>
+
+          <button className="btn">Join mailing list</button>
         </Section>
       </>
       

@@ -9,6 +9,13 @@ function Hero () {
                 <h2>SAMPLE ARTIST STUDIO NAME</h2>
                 
                 <h4>ORIGINAL ARTWORK | EACH UNIQUE</h4>
+
+                <p>
+                    Discover <strong>handcrafted artwork</strong> inspired by nature, colour and texture. 
+                    Browse <strong>original collections</strong> or commission a completely 
+                    <strong> unique piece</strong> created specifically for your home.
+                </p>
+                {/*
                 <p>
                     <strong>Inspired</strong> by the beauty of the <strong>natural world</strong> and our <strong>solar system.</strong>
                 </p>
@@ -16,6 +23,7 @@ function Hero () {
                 <p>
                     <strong>Commison</strong> a piece, espiaclly <strong>unique to you.</strong>
                 </p>
+                    */}
 
                 {/* 
                 The link element is covered by the button 
@@ -27,7 +35,10 @@ function Hero () {
             </div>
 
             <div className={styles.heroImage}>
-                <img src="https://placehold.co/400x400" />
+                <img 
+                    src="https://placehold.co/400x400" 
+                    alt="Featured artwork piece" 
+                />
             </div>
 
         </div>  

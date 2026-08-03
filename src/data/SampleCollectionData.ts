@@ -5,17 +5,17 @@ export const sampleCollections: Collection[] = [
     {
         id: 1,
         name: "Planets",
-        description: "Pieces inspired by the colours of our solar system",
+        description: "Rich metallic colours and flowing textures inspired by the beauty of our solar system.",
     },
     {
         id: 2,
         name: "Beach",
-        description: "Sample beach collection desc",
+        description: "Soft blues, sandy neutrals and ocean-inspired pours that bring a calm atmosphere into any space.",
     },
     {
         id: 3,
         name: "Woodland",
-        description: "Sample woodland collection desc",
+        description: "Earthy greens, warm browns and organic textures celebrating the natural world.",
     }
 ];
 
