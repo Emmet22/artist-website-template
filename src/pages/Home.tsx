@@ -7,6 +7,7 @@ import Collection from "../components/artwork/Collection";
 import FlipCard from "../components/common/FlipCard";
 import Timeline from "../components/common/Timeline";
 import TestimonialCard from "../components/common/TestimonialCard";
+import NewsletterSignup from "../components/common/NewsletterSignup";
 
 // import sample data
 import { sampleCollections } from "../data/SampleCollectionData";
@@ -83,13 +84,7 @@ function Home() {
         </Section>
 
         <Section> 
-          <h3>STAY CONNECTED</h3>
-          <p>
-            Receive updates about new collections, 
-            exclusive releases and behind-the-scenes studio stories.
-          </p>
-
-          <button className="btn">Join mailing list</button>
+            <NewsletterSignup />
         </Section>
       </>
       

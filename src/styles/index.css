@@ -125,8 +125,26 @@ ul, ol {
 /* form styling */
 input, textarea, select {
     font: inherit;
+    border: 2px solid var(--clr-border);
     border-radius: var(--radius);
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--clr-surface);
+    color: var(--clr-primary);
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+input::placeholder {
+    color: var(--clr-secondary);
+}
+
+input:focus, textarea:focus, select:focus { 
+    outline: none;
+    border-color: var(--clr-accent);
+   
 }
 
 form {

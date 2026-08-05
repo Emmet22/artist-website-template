@@ -1,0 +1,25 @@
+.newsletterSignupContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.cardContainter {
+    display:flex;
+    justify-content:center;
+    gap:2rem;
+    flex-wrap:wrap;
+    margin-top:1rem;
+}
+
+.newsletterForm {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
