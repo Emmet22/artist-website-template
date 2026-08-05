@@ -6,15 +6,33 @@ import Hero from "../components/common/Hero";
 import Collection from "../components/artwork/Collection";
 import FlipCard from "../components/common/FlipCard";
 import Timeline from "../components/common/Timeline";
+import TestimonialCard from "../components/common/TestimonialCard";
 
 // import sample data
 import { sampleCollections } from "../data/SampleCollectionData";
 import { processSteps } from "../data/ProcessSteps";
+import {testimonials} from "../data/SampleTestimonials";
 
 function Home() {
     return (
       <>
         <Hero />
+
+        <Section>
+          <h2>Hear from our collectors</h2>
+
+          <div className={styles.testimonialContainer}>
+            {
+              testimonials.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial.id}
+                  {...testimonial}
+                />
+              ))
+            }
+          </div>
+
+        </Section>
 
         <Section>
           <h2>Featured Collections</h2>

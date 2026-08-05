@@ -1,0 +1,45 @@
+.testimonialCard {
+    width: 300px;
+    min-height: 200px;
+
+    padding: 2rem;
+    background: var(--clr-surface);
+
+    border: 2px solid var(--clr-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.testimonialCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.rating {
+    font-size: 1.5rem;
+    color: var(--clr-accent);
+    line-height: 2;
+    letter-spacing: 0.15rem;
+}
+
+.quote {
+    flex: 1;
+    font-style: italic;
+    line-height: 1.5;
+    font-size: 1.15rem;
+}
+
+.name {
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: right;
+    color: var(--clr-accent);
+}
