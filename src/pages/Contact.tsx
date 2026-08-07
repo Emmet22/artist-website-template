@@ -1,5 +1,6 @@
 // import components
 import Section from "../components/common/Section";
+import Card from "../components/common/Card";
 
 // import styles
 import styles from "./Contact.module.css";
@@ -8,26 +9,53 @@ function Contact() {
     return (
         <main>
             <div className={styles.contactHero}>
-                <h1>HAVE A QUESTION?</h1>
+                <h1>lets create something unique</h1>
                 <p>
-                    Whether your interested in an original piece,
-                    a commision, or want to <strong>get in touch</strong>, we would love
-                    to hear from you!
-                    <br/>
-                    Choose one of our various <strong>contact methods</strong> 
-                    and get in touch
+                    Whether you are interested in an original artwork,
+                    a personalised commission, or simply want to learn more,
+                    we would love to hear from you.
                 </p>
             </div>
 
             <Section>
-                <div>
-                    <h3>Contact methods</h3>
-                    <ul>
-                        <li>Email: ...</li>
-                        <li>Instagram: </li>
-                        <li>Facebook:</li>
-                        <li>Contact form</li>
-                    </ul>
+                <h3>Contact methods</h3>
+
+                <div className={styles.contactMethods}>
+
+                    <Card>
+                        <h4>Start a Commission</h4>
+                        <p>
+                            Create a personalised artwork designed around your vision.
+                        </p>
+                        <button className="btn">Start enquiry</button>
+                    </Card>
+
+                    <Card>
+                        <h4>Instagram</h4>
+                        <p>Follow the studio process and see new releases.</p>
+                        <button className="btn">Follow</button>
+                    </Card>
+
+                    <Card>
+                        <h4>Email</h4>
+                        <p>
+                            Have a question? Send us a direct message.
+                        </p>
+
+                        <button className="btn">
+                            Email us
+                        </button>
+                    </Card>
+                    <Card>
+                        <h4>Newsletter</h4>
+                        <p>
+                            Be the first to hear about new collections.
+                        </p>
+
+                        <button className="btn">
+                            Sign up
+                        </button>
+                    </Card>
                 </div>
             </Section>
 

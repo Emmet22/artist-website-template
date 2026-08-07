@@ -6,7 +6,8 @@
     box-shadow:var(--shadow);
 
     padding:1.5rem;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
 
     transition:
         transform .3s ease,

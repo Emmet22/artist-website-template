@@ -15,6 +15,14 @@
     max-width: 60ch;
 }
 
+.contactMethods {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 .contactForm {
     align-items: center;
     padding: 1rem;
