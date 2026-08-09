@@ -2,9 +2,14 @@
 import Section from "../components/common/Section";
 import Card from "../components/common/Card";
 import ContactForm from "../components/common/ContactForm";
+import Timeline from "../components/common/Timeline";
 
 // import styles
 import styles from "./Contact.module.css";
+import NewsletterSignup from "../components/common/NewsletterSignup";
+
+// import data
+import { commissionProcessSteps } from "../data/CommissionProcessSteps";
 
 function Contact() {
     return (
@@ -72,23 +77,17 @@ function Contact() {
             </Section>
 
             <Section>
-                <div>
-                    <h3>Join our newsletter</h3>
-                    <p>Be the first to hear about new avaliability, collections and more</p>
-                    
-                    <button className="btn">Join email list</button>
-                </div>
+                <NewsletterSignup />
             </Section>
 
             <Section>
-                <div>
-                    <h3>Commisson information</h3>
-                    <ul>
-                        <li>Explain commision process</li>
-                        <li>Prevent people from being daunted by commision enquirys</li>
-                        <li>reduce friction from wanting a piece and not wanting to enquir a commision</li>
-                    </ul>
-                </div>
+                <h3>How commissions work</h3>
+                <p>
+                    From the initial idea to the finished artwork, 
+                    we make the commission process simple and personal.
+                </p>
+
+                <Timeline steps={commissionProcessSteps} />
             </Section>
 
             <Section>
