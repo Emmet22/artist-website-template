@@ -1,6 +1,7 @@
 // import components
 import Section from "../components/common/Section";
 import Card from "../components/common/Card";
+import ContactForm from "../components/common/ContactForm";
 
 // import styles
 import styles from "./Contact.module.css";
@@ -23,22 +24,22 @@ function Contact() {
                 <div className={styles.contactMethods}>
 
                     <Card>
-                        <h4>Start a Commission</h4>
-                        <p>
+                        <h4 className={styles.contactCardTitle}>Start a Commission</h4>
+                        <p className={styles.contactCardDescription}>
                             Create a personalised artwork designed around your vision.
                         </p>
                         <button className="btn">Start enquiry</button>
                     </Card>
 
                     <Card>
-                        <h4>Instagram</h4>
-                        <p>Follow the studio process and see new releases.</p>
+                        <h4 className={styles.contactCardTitle}>Instagram</h4>
+                        <p className={styles.contactCardDescription}>Follow the studio process and see new releases.</p>
                         <button className="btn">Follow</button>
                     </Card>
 
                     <Card>
-                        <h4>Email</h4>
-                        <p>
+                        <h4 className={styles.contactCardTitle}>Email</h4>
+                        <p className={styles.contactCardDescription}>
                             Have a question? Send us a direct message.
                         </p>
 
@@ -47,8 +48,8 @@ function Contact() {
                         </button>
                     </Card>
                     <Card>
-                        <h4>Newsletter</h4>
-                        <p>
+                        <h4 className={styles.contactCardTitle}>Newsletter</h4>
+                        <p className={styles.contactCardDescription}>
                             Be the first to hear about new collections.
                         </p>
 
@@ -60,27 +61,14 @@ function Contact() {
             </Section>
 
             <Section>
-                <div>
-                    <h3>Contact form</h3>
-                    <p>CURRENT WORK IN PROGRESS, also ensure rate limiting</p>
-                </div>
-                <div>
-                    <form className={styles.contactForm}>
-                        <label>Name:</label>
-                        <input type="text" placeholder="name"/>
+                <h3>Send us an enquiry</h3>
 
-                        <label>Email:</label>
-                        <input type="text" placeholder="email"/>
-                        
-                        <label>Subject:</label>
-                        <input type="text" placeholder="subject"/>
-                        
-                        <label>Message:</label>
-                        <textarea placeholder="message"/>
-                        <button type="submit" className="btn">Submit</button>    
-                    </form>
-                    
-                </div>
+                <p>
+                    Have a question about an artwork or interested in a commission?
+                    Send us a message and we will get back to you.
+                </p>
+
+                <ContactForm />
             </Section>
 
             <Section>

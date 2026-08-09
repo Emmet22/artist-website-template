@@ -23,12 +23,17 @@
     margin-top: 2rem;
 }
 
-.contactForm {
-    align-items: center;
-    padding: 1rem;
+.contactMethods .card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
 }
 
-.contactForm label {
-    display: block;
-    width: 60%;
+.contactCardTitle {
+    border-bottom: 2px solid var(--clr-border);
+}
+
+.contactCardDescription {
+    margin: 0;
+    padding: 0.5rem;
 }

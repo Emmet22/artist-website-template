@@ -1,0 +1,48 @@
+/*
+.contactForm {
+    align-items: center;
+    padding: 1rem;
+}
+
+.contactForm label {
+    display: block;
+    width: 60%;
+}
+    */
+
+.form {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 2rem auto 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    color: var(--clr-primary);
+    font-weight: 600;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form .btn {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+}
