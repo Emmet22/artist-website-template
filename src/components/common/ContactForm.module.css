@@ -1,14 +1,47 @@
-/*
-.contactForm {
-    align-items: center;
-    padding: 1rem;
+.formSelector {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 650px;
+    gap: 1rem;
+    margin: 2rem auto;
 }
 
-.contactForm label {
-    display: block;
-    width: 60%;
+.formSelector button {
+    flex: 1;
+    font: inherit;
+    padding: 1rem;
+    border: 2px solid var(--clr-border);
+    border-radius: var(--radius);
+    background-color: var(--clr-surface);
+   
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
 }
-    */
+
+.formSelector button:hover {
+    border-color: var(--clr-accent);
+}
+
+.formSelector .active {
+    background-color: var(--clr-accent);
+    border-color: var(--clr-accent);
+    color: var(--clr-primary);
+}
+
+.formSection { 
+    width: 100%; 
+    max-width: 750px; 
+    margin: 0 auto 1rem; 
+}
+
+.formSection h4 { 
+    margin-bottom: 0.75rem; 
+    border-bottom: 2px solid var(--clr-border); 
+}
 
 .form {
     width: 100%;
