@@ -3,6 +3,7 @@ import Section from "../components/common/Section";
 import Card from "../components/common/Card";
 import ContactForm from "../components/common/ContactForm";
 import Timeline from "../components/common/Timeline";
+import FAQ from "../components/common/FAQ";
 
 // import styles
 import styles from "./Contact.module.css";
@@ -10,6 +11,7 @@ import NewsletterSignup from "../components/common/NewsletterSignup";
 
 // import data
 import { commissionProcessSteps } from "../data/CommissionProcessSteps";
+import { contactFAQs } from "../data/contactFAQs";
 
 function Contact() {
     return (
@@ -77,10 +79,6 @@ function Contact() {
             </Section>
 
             <Section>
-                <NewsletterSignup />
-            </Section>
-
-            <Section>
                 <h3>How commissions work</h3>
                 <p>
                     From the initial idea to the finished artwork, 
@@ -91,8 +89,17 @@ function Contact() {
             </Section>
 
             <Section>
+                <NewsletterSignup />
+            </Section>
+
+            <Section>
                 <h3>Contact FAQs</h3>
-                
+                <p>
+                    Find answers to some of the most common questions about
+                    contacting the studio, commissions and artwork.
+                </p>
+
+                <FAQ items={contactFAQs} />
             </Section>
         </main> 
     );
