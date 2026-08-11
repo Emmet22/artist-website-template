@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 // import components
 import Section from "../components/common/Section";
 import Tabs from "../components/common/Tabs";
+import VerticalTabbedLayout from "../components/common/VerticalTabbedLayout";
 
 // import data
 import { creativeProcessSteps } from "../data/creativeProcessSteps";
+import { materialItems } from "../data/MaterialOptions";
 
 // import styles
 import styles from "./About.module.css";
@@ -87,36 +89,22 @@ function About () {
             {/* MATERIALS */}
             <Section>
 
-                <div className={styles.materialsSection}>
-                     <div className={styles.materialsText}>
-                        <div className={styles.materialTitle}>
-                            <h2>Materials & Craft</h2>
-                        </div>
+                <div className={styles.materials}>
 
-                        <div className={styles.textSection}>
-                            <p>
-                                Every artwork is created using carefully
-                                selected materials chosen for their
-                                appearance, durability, and ability to
-                                preserve the finished piece.
-                            </p>
-                        </div>
-                        
-
-                        <ul>
-                            <li>Premium artist canvas</li>
-                            <li>Professional acrylic paints</li>
-                            <li>Protective archival varnish</li>
-                            <li>Quality framing materials</li>
-                        </ul>
+                    <div className={styles.materialTitle}>
+                        <h2>Materials & Craft</h2>
                     </div>
 
-                    <div className={styles.materialsImage}>
-                        <img
-                            src="https://placehold.co/400x400"
-                            alt="Close-up detail of the artwork and materials"
-                        />
+                    <div className={styles.textSection}>
+                        <p>
+                            Every artwork is created using carefully selected
+                            materials chosen for their appearance, durability,
+                            and ability to preserve the finished piece.
+                        </p>
                     </div>
+
+                    <VerticalTabbedLayout items={materialItems} />
+
                 </div>
             </Section>
 

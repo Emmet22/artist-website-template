@@ -1,0 +1,91 @@
+/* MAIN LAYOUT */
+.layout {
+    width: 100%;
+    max-width: 1000px;
+    margin: 3rem auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+
+    align-items: center;
+}
+
+/* LEFT CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* VERTICAL TABS */
+.tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+    padding: 1rem 0;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--clr-border);
+
+    color: var(--clr-secondary);
+
+    font: inherit;
+    font-weight: 600;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.tab:hover {
+    color: var(--clr-accent);
+}
+
+.tab.active {
+    color: var(--clr-primary);
+    padding-left: 0.5rem;
+}
+
+/* NUMER */
+.number {
+    font-size: 0.8rem;
+    color: var(--clr-secondary);
+}
+
+/* TITLE */
+.title {
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+}
+
+/* DESCRIPTION */
+.description {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* IMAGE */
+.image {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
