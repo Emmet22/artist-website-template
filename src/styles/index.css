@@ -96,6 +96,7 @@ ul, ol {
 .btn {
     cursor: pointer;
     font: inherit;
+    text-transform: uppercase;
     border: none;
     border-radius: var(--radius);
     padding: 0.5rem 1rem;
