@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 
 // import components
 import Section from "../components/common/Section";
+import Tabs from "../components/common/Tabs";
+
+// import data
+import { creativeProcessSteps } from "../data/creativeProcessSteps";
 
 // import styles
 import styles from "./About.module.css";
@@ -15,14 +19,14 @@ function About () {
             <div className={styles.aboutHero}>
                 <div className={styles.heroImage}>
                     <img 
-                        src="https://placehold.co/400x400"
+                        src="https://placehold.co/600x600"
                         alt="artist/studio image"
                     />
                 </div>
                 <div className={styles.heroText}>
                     <h1>ARTIST/STUDIO NAME</h1>
                     <p>Art inspired by place, colour, and the stories we carry with us.</p>
-                    <button className="btn">EXPLORE THE GALLERY</button>
+                    <Link to="/gallery" className="btn">EXPLORE THE GALLERY</Link>
                 </div>
             </div>
 
@@ -74,13 +78,9 @@ function About () {
                     <h2>How each piece comes to life</h2>
                 
                 </div>
-                <p>
-                    From the first idea to the finished artwork,
-                    every piece develops through a considered
-                    creative process.
-                </p>
-
+              
                 {/* interactive process component */}
+                <Tabs items={creativeProcessSteps} />
 
             </Section>
 
