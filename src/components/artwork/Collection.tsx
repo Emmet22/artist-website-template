@@ -20,22 +20,21 @@ function Collection({id, name, description}: CollectionProps) {
     
     return (
         <div className={styles.collection}>
-            <h2>{name}</h2>
-
-            <div className={styles.collectionContent}>            
-                <div className={styles.collectionInfo}>
-                    <p>{description}</p>
-                </div>
-                
-                <div className={styles.collectionPieces}>
-                    {collectionPieces.map((piece) => 
-                        <ArtPiece 
-                        key={piece.id}
-                        {...piece}
-                        />
-                    )}
-                </div>
+            
+            <div className={styles.heading}>
+                <h2>{name}</h2>
+                <p>{description}</p>
             </div>
+            
+            <div className={styles.collectionPieces}>
+                {collectionPieces.map((piece) => 
+                    <ArtPiece 
+                    key={piece.id}
+                    {...piece}
+                    />
+                )}
+            </div>
+         
         </div>
     );
 }

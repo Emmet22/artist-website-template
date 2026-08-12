@@ -33,15 +33,16 @@ function Gallery() {
 
             </Section>
             
-            <Section>
                 {/* Map the sample collections*/}
                 {sampleCollections.map((collection) => (
-                    <Collection 
-                        key={collection.id}
-                        {...collection}
-                    />
+                    <Section>
+                        <Collection 
+                            key={collection.id}
+                            {...collection}
+                        />
+                    </Section>
                 ))}
-            </Section>
+           
         </div>
     );
 }
