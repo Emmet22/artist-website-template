@@ -3,11 +3,7 @@
     flex-direction: column;
 
     gap:2rem;
-    padding:2rem;
-
-    border: 2px solid var(--clr-border);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    padding:0 2rem 0 0;
 }
 
 .previewImage {

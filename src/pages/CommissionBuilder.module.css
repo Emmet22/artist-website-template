@@ -1,9 +1,35 @@
-.heading {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.hero {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 1.25rem;
+}
+
+.heroHeading {
     border-bottom: 2px solid var(--clr-border);
+}
+
+.heroHeading h1 {
+    margin: 0;
+    font-size: 2.5rem;
     letter-spacing: 0.25rem;
-    margin-bottom: 2rem;
+}
+
+.heroText {
+    max-width: 50ch;
+}
+
+.heroText p {
+    margin: 0;
+    color: var(--clr-secondary);
+    font-size: 1.2rem;
+    line-height: 1.7;
 }
 
 .configurator {
@@ -13,12 +39,24 @@
     align-items: start;
 }
 
+.columnHeading {
+    border-bottom: 2px solid var(--clr-border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.columnHeading h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+}
+
 .previewColumn {
-    top: 2rem;
+    
 }
 
 .optionsColumn {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }

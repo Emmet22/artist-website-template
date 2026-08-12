@@ -20,9 +20,14 @@ function ArtworkSelector({
 }: ArtworkSelectorProps) {
     return (
         <div className={styles.selector}>
+
             <div className={styles.heading}>
-                <h3>Explore other pieces</h3>
-                <p>Select another piece to customise</p>
+                <div className={styles.title}>
+                    <h3>Explore other pieces</h3>
+                </div>
+                <div className={styles.text}>
+                    <p>Choose another artwork to customise</p>
+                </div>
             </div>
 
             <div className={styles.grid}>

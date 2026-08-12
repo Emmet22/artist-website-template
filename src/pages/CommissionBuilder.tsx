@@ -64,15 +64,29 @@ function CommissionBuilder() {
 
     return (
         <main>
+            
+            <div className={styles.hero}>
+                <div className={styles.heroHeading}>
+                    <h1>Create your piece</h1>     
+                </div>
+                <div className={styles.heroText}>
+                    <p>
+                        Choose an artwork and make it your own. 
+                        Select the size, material and frame to create a 
+                        piece suited to your space
+                    </p>
+                </div>
+            </div>
 
             <Section>
-                <div className={styles.heading}>
-                    <h2>Create your piece</h2>
-                </div>
-
+                
                 <div className={styles.configurator}>
 
                     <div className={styles.previewColumn}>
+                        <div className={styles.columnHeading}>
+                            <h2>Your artwork</h2>
+                        </div>
+
                         <LivePreview 
                             artPiece={selectedArtPiece}
                             collection={collection}
@@ -83,6 +97,10 @@ function CommissionBuilder() {
                     </div>
 
                     <div className={styles.optionsColumn}>
+                        <div className={styles.columnHeading}>
+                            <h2>customisation options</h2>
+                        </div>
+
                         <CustomisationPanel 
                             sizes={sizeOptions}
                             frames={frameOptions}

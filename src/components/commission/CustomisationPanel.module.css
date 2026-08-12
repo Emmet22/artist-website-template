@@ -1,7 +1,7 @@
 .panel {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
 .panel h2 {
