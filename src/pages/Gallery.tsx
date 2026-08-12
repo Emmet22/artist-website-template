@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // import components
 import Section from "../components/common/Section";
 import Collection from "../components/artwork/Collection";
@@ -30,7 +32,6 @@ function Gallery() {
 
             <Section>
                 <FeaturedArtwork />
-
             </Section>
             
                 {/* Map the sample collections*/}
@@ -43,6 +44,26 @@ function Gallery() {
                     </Section>
                 ))}
            
+            <Section>
+                <div className={styles.galleryCTA}>
+                    <div className={styles.galleryCTATitle}>
+                        <h2>Can't find exactly what you're looking for?</h2>
+                    </div>
+                
+                    <div className={styles.galleryCTAContent}>
+                        <p>
+                            Create a personalised piece inspired by your space,
+                            story and style.
+                        </p>
+                    </div>
+
+                    <Link to="/commission" className="btn">
+                        CREATE YOUR OWN PIECE
+                    </Link>
+
+                </div>
+            </Section>
+
         </div>
     );
 }
