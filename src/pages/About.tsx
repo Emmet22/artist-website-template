@@ -144,7 +144,7 @@ function About () {
                         <p>Create a personalised piece inspired by your space, story and style.</p>
                     </div>
                     <Link to="/commission" className="btn">create your own piece</Link>
-                </div>
+                </div>                
             </Section>
         </main>
         </>
