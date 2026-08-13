@@ -36,7 +36,6 @@ function Home() {
         </Section>
 
         <Section>
-          <h2>Featured Collections</h2>
           <Collection 
             {...sampleCollections[0]}
           />  

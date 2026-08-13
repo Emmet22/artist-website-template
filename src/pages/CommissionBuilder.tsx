@@ -78,54 +78,59 @@ function CommissionBuilder() {
                 </div>
             </div>
 
-            <Section>
-                
-                <div className={styles.configurator}>
+            <div
+                id="configurator" 
+            >
+                <Section>
+                    <div
+                        className={styles.configurator}
+                    >
 
-                    <div className={styles.previewColumn}>
-                        <div className={styles.columnHeading}>
-                            <h2>Your artwork</h2>
+                        <div className={styles.previewColumn}>
+                            <div className={styles.columnHeading}>
+                                <h2>Your artwork</h2>
+                            </div>
+
+                            <LivePreview 
+                                artPiece={selectedArtPiece}
+                                collection={collection}
+                                selectedSize={selectedSize}
+                                selectedMaterial={selectedMaterial}
+                                selectedFrame={selectedFrame}
+                            />
                         </div>
 
-                        <LivePreview 
-                            artPiece={selectedArtPiece}
-                            collection={collection}
-                            selectedSize={selectedSize}
-                            selectedMaterial={selectedMaterial}
-                            selectedFrame={selectedFrame}
-                        />
-                    </div>
+                        <div className={styles.optionsColumn}>
+                            <div className={styles.columnHeading}>
+                                <h2>customisation options</h2>
+                            </div>
 
-                    <div className={styles.optionsColumn}>
-                        <div className={styles.columnHeading}>
-                            <h2>customisation options</h2>
+                            <CustomisationPanel 
+                                sizes={sizeOptions}
+                                frames={frameOptions}
+                                materials={materialOptions}
+
+                                selectedSize={selectedSize}
+                                selectedMaterial={selectedMaterial}
+                                selectedFrame={selectedFrame}
+
+                                setSelectedSize={setSelectedSize}
+                                setSelectedMaterial={setSelectedMaterial}
+                                setSelectedFrame={setSelectedFrame}
+                            />
+
+                            <PriceSummary 
+                                basePrice={selectedArtPiece.price ?? 300} // basic price e.g. €300
+                                selectedSize={selectedSize}
+                                selectedMaterial={selectedMaterial}
+                                selectedFrame={selectedFrame}
+                            />
                         </div>
 
-                        <CustomisationPanel 
-                            sizes={sizeOptions}
-                            frames={frameOptions}
-                            materials={materialOptions}
-
-                            selectedSize={selectedSize}
-                            selectedMaterial={selectedMaterial}
-                            selectedFrame={selectedFrame}
-
-                            setSelectedSize={setSelectedSize}
-                            setSelectedMaterial={setSelectedMaterial}
-                            setSelectedFrame={setSelectedFrame}
-                        />
-
-                         <PriceSummary 
-                            basePrice={selectedArtPiece.price ?? 300} // basic price e.g. €300
-                            selectedSize={selectedSize}
-                            selectedMaterial={selectedMaterial}
-                            selectedFrame={selectedFrame}
-                        />
                     </div>
-
-                </div>
+                </Section>
+            </div>
             
-            </Section>
             
             <Section>
                 <ArtworkSelector

@@ -32,6 +32,10 @@
     line-height: 1.7;
 }
 
+.configuratorSection {
+    scroll-margin-top: 0;
+}
+
 .configurator {
     display: grid;
     grid-template-columns: 1fr 1fr;

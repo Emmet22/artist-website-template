@@ -39,7 +39,13 @@ function ArtworkSelector({
                                     ? styles.active 
                                     : ""
                                     }`}
-                        onClick={() => setSelectedArtPiece(piece)}
+                        onClick={() => {
+                            setSelectedArtPiece(piece)
+                            document.getElementById("configurator")?.scrollIntoView({ 
+                                behavior: "smooth",
+                                block: "start" 
+                            });
+                        }}              
                     >
                     <img 
                         src={piece.imageURL}
