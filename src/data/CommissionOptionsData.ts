@@ -16,14 +16,14 @@ export const sizeOptions: SizeOption[] = [
         name: "Medium",
         width: 50,
         height: 70,
-        priceModifier: 100
+        priceModifier: 20
     },
     {
         id: 3,
         name: "Large",
         width: 70,
         height: 100,
-        priceModifier: 220
+        priceModifier: 70
     }
 ];
 
@@ -33,19 +33,19 @@ export const frameOptions: FrameOption[] = [
         id: 1,
         name: "Black Frame",
         color: "Black",
-        priceModifier: 50
+        priceModifier: 20
     },
     {
         id: 2,
         name: "White Frame",
         color: "White",
-        priceModifier: 50
+        priceModifier: 20
     },
     {
         id: 3,
         name: "Natural Oak Frame",
         color: "Oak",
-        priceModifier: 90
+        priceModifier: 40
     }
 ];
 

@@ -10,7 +10,7 @@ export const artworkData: ArtPiece[] = [
         description: "Inspired by the vivid colours of the northern lights.",
         imageURL: "https://placehold.co/150x150",
         available: true,
-        price: 450,
+        price: 100,
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const artworkData: ArtPiece[] = [
         description: "A textured abstract interpretation of Mars.",
         imageURL: "https://placehold.co/150x150",
         available: true,
-        price: 390,
+        price: 130,
     },
     {
         id: 3,
@@ -38,7 +38,7 @@ export const artworkData: ArtPiece[] = [
         description: "Soft evening colours overlooking the Atlantic.",
         imageURL: "https://placehold.co/150x150",
         available: true,
-        price: 340,
+        price: 80,
     },
     {
         id: 5,
