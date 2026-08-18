@@ -6,21 +6,13 @@
 
     /* blurred glass filter */
     backdrop-filter: blur(20px);
-    background: var(--clr-surface-transparen);
     
     /* Updated layout to be flexbox */
     display: flex;
     align-items: center;
     justify-content: center;
     
-    /* OLD CSS (GRID LAYOUT) - wont be good for responsiveness
-    display: grid;
-    grid-template-columns: 3;
-    align-items: center;
-    */
-    
     width: 100%;
-    /*background-color: var(--clr-surface);*/
     padding: 1rem 5rem;
     border-bottom: 2px solid var(--clr-border);
     
@@ -39,7 +31,7 @@
     Remove when adding sample logo.
     */
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -55,4 +47,58 @@
 
 .navLinks a:hover {
     color: var(--clr-accent-hover);
+}
+
+/* mobile responsiveness */
+.menuButton {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: space-between;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+        border-width: 3px;
+    }
+
+    .menuButton {
+        display: block;
+
+        border: none;
+        background: none;
+
+        font-size: 2rem;
+        color: var(--clr-accent);
+
+        cursor: pointer;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .navLinks.open {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 1.5rem;
+
+        background: var(--clr-surface);
+        border-bottom: 2px solid var(--clr-border);
+    }
+
 }
