@@ -7,3 +7,11 @@
     border: 2px solid var(--clr-border);
     border-radius: var(--radius);
 }   
+
+/* responsive layout for mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+}

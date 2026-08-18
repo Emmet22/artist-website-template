@@ -166,3 +166,27 @@ h1, label {
     letter-spacing: 0.15rem;
     margin-bottom: 0.5rem;
 }
+
+/* responsive foundation for mobile */
+@media (max-width: 768px) {
+    body {
+        line-height: 1.5;
+    }
+    
+    main {
+        padding: 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+    }
+
+    p {
+        max-width: 100%;
+    }
+
+    .btn .enquireButton {
+        padding: 0.4rem 0.8rem;
+    }
+}
