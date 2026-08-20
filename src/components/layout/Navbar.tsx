@@ -7,6 +7,10 @@ function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => {
+    setMenuOpen(false);
+  }
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
@@ -22,11 +26,11 @@ function Navbar() {
       </button>
 
       <ul className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-        <li><Link to="/">HOME</Link></li>
-        <li><Link to="/gallery">GALLERY</Link></li>
-        <li><Link to="/commission">CREATE YOUR PIECE</Link></li>
-        <li><Link to="/about">ABOUT</Link></li>
-        <li><Link to="/contact">CONTACT</Link></li>
+        <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
+        <li><Link to="/gallery" onClick={closeMenu}>GALLERY</Link></li>
+        <li><Link to="/commission" onClick={closeMenu}>CREATE YOUR PIECE</Link></li>
+        <li><Link to="/about" onClick={closeMenu}>ABOUT</Link></li>
+        <li><Link to="/contact" onClick={closeMenu}>CONTACT</Link></li>
       </ul>
       </nav>
   );

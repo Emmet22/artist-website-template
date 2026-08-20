@@ -78,27 +78,54 @@
         color: var(--clr-accent);
 
         cursor: pointer;
+        padding: 0.5rem;
     }
 
     .navLinks {
-        display: none;
-    }
-
-    .navLinks.open {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1rem;
 
         position: absolute;
         top: 100%;
         left: 0;
-
         width: 100%;
 
         padding: 1.5rem;
-
         background: var(--clr-surface);
         border-bottom: 2px solid var(--clr-border);
+
+        /* for animation */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+
+        transition: 
+            max-height 0.3s ease,
+            opacity 0.3s ease,           
+            visibility 0.3s ease;
     }
 
+    .navLinks.open {
+        max-height: 500px; /* large value */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navLinks li {
+        width: 100%;
+        border-bottom: 1px solid var(--clr-border);
+    }
+
+    /* get rid of last links border becayse it looks weird */
+    .navLinks li:last-child {
+        border-bottom: none;
+    }
+
+    .navLinks a {
+        display: block;
+        padding: 0.5rem;
+    }
+    
 }
