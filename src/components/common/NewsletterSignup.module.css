@@ -23,3 +23,23 @@
     width: 100%;
     max-width: 500px;
 }
+
+@media (max-width: 768px) {
+
+    .cardContainter {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .newsletterForm {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newsletterForm input,
+    .newsletterForm button {
+        width: 100%;
+        min-height: 44px;
+    }
+}

@@ -38,3 +38,22 @@
     box-shadow: var(--shadow);
 }
 
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .heroText {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .heroImage {
+        width: 100%;
+        max-width: 400px;
+    }
+}

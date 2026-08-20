@@ -43,3 +43,17 @@
     text-align: right;
     color: var(--clr-accent);
 }
+
+@media (max-width: 768px) {
+
+    .testimonialContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .testimonialCard {
+        width: 100%;
+        max-width: 350px;
+    }
+}
