@@ -26,3 +26,7 @@ CURRENTLY
 - Email list sign up.
 - Deployment with Vercel, demo and client websites.
 - Full responsivness for mobile and different screen sizes.
+
+## How to run
+use the command "npm run dev" in the terminal to run the project
+on a localhost.
